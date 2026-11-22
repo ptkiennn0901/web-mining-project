@@ -1,0 +1,21 @@
+fake rate 0.132  ->  homophily of RANDOM labels = 0.770
+user-disjoint: train 40,258  test 13,470
+
+rel   homophily  vs random      edges  cross tr-te  test w/ lab nb     AUC      AP
+----------------------------------------------------------------------------------
+RUR       0.997     +0.227    110,112            0           0.0%   0.500   0.134
+RTR       0.792     +0.021    466,352      110,934          94.8%   0.551   0.162
+RSR       0.804     +0.033  8,166,840    1,935,681          99.8%   0.627   0.233
+
+E3 (all 3 relations pooled): AUC 0.629  AP 0.236  test reviews with >=1 labeled neighbor: 99.9%
+
+split           rel     test w/ labeled nb     AUC      AP
+----------------------------------------------------------
+user_disjoint   RUR                  0.0%   0.500   0.134
+user_disjoint   RTR                 94.8%   0.551   0.162
+user_disjoint   RSR                 99.8%   0.627   0.233
+
+random          RUR                 43.6%   0.767   0.309
+random          RTR                 91.4%   0.528   0.150
+random          RSR                 99.7%   0.630   0.242
+

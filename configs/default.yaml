@@ -1,0 +1,19 @@
+seed: 42
+paths:
+  raw: data/raw
+  processed: data/processed/reviews.parquet
+  splits: splits
+  results: results/runs.csv
+  figures: figures
+
+# Columns that leak the label and must never enter a feature table
+# (0 of 8,919 fakes carry any vote). Only the leakage-demo run reads them.
+leak_columns: [useful, funny, cool]
+
+expected:
+  n_rows: 67395
+  n_fake: 8919
+  n_users: 38063
+  n_products: 201
+  n_hotel: 5854
+  n_restaurant: 61541
